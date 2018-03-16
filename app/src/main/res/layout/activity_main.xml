@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerlayout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/holo_blue_light"
+            android:theme="@style/Base.AlertDialog.AppCompat.Light"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:title="mzitu.com" />
+    </android.support.design.widget.AppBarLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/fragment_container"
+        ></FrameLayout>
+
+    <com.ashokvarma.bottomnavigation.BottomNavigationBar
+        android:id="@+id/buttom_navigationbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="bottom"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        ></com.ashokvarma.bottomnavigation.BottomNavigationBar>
+</LinearLayout>
+<android.support.design.widget.NavigationView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/navigation_view"
+    android:layout_gravity="start"
+    app:menu="@menu/navigation_menu"
+    app:headerLayout="@layout/nav_header_layout">
+
+</android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>
